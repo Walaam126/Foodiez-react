@@ -1,12 +1,12 @@
 import { ListItem } from "../styles";
-
-function IngredientIem() {
+import { Link } from "react-router-dom";
+function IngredientIem({ ingredient }) {
   return (
     <ListItem>
-      <p>Ingredient item</p>
-      {/* <Link to={`/categories/${category.slug}`}>
-        <p>category img</p>
-      </Link> */}
+      <Link to={`/categories`}>
+        <img src={ingredient.image} alt="foodhoto" />
+      </Link>
+      <p>{ingredient.name}</p>
     </ListItem>
   );
 }

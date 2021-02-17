@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { fetchCategory } from "./actions/categoryAction";
+import { fetchIngredient } from "./actions/ingredientAction";
 import rootReducer from "./reducers";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -10,5 +11,6 @@ const store = createStore(
 );
 
 store.dispatch(fetchCategory());
+store.dispatch(fetchIngredient());
 
 export default store;

@@ -1,25 +1,19 @@
-import { List } from "../styles";
+import { List, Title } from "../styles";
 import CategoryItem from "./CategoryItem";
 import { useSelector } from "react-redux";
-import { useState, useEffect } from "react";
+import Loading from "./Loading";
+
 function CategoryList() {
-  console.log("categories page");
   const loading = useSelector((state) => state.categoryReducer.loading);
   const categories = useSelector((state) => state.categoryReducer.categories);
 
-  let categoriesList = [];
-
+  let categoriesList = categories.map((category) => (
+    <CategoryItem category={category} key={category.id} />
+  ));
   return (
     <div>
-      <h2>Category List</h2>
-      {loading ? (
-        <p>loading True</p>
-      ) : (
-        categories.map((category) => (
-          <CategoryItem category={category} key={category.id} />
-        ))
-      )}
-
+      <Title>Category List</Title>
+      {loading ? <Loading /> : true}
       <List>{categoriesList}</List>
     </div>
   );
