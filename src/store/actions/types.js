@@ -1,0 +1,2 @@
+export const FETCH_CATEGORY = "FETCH_CATEGORY";
+export const CREATE_CATEGORY = "CREATE_CATEGORY";
