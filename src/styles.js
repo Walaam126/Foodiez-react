@@ -13,6 +13,7 @@ export const List = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const CatImage = styled.img`

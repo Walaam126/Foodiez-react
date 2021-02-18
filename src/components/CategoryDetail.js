@@ -11,21 +11,28 @@ function CategoryDetail() {
   const category = categories.find(
     (_category) => _category.slug === categorySlug
   );
+
   if (!category) {
     return <Redirect to="/categories" />;
   }
-  const ingredients = category.ingredients.map((ingredient) =>
-    allingredients.find((_ingredient) => _ingredient.id === ingredient.id)
-  );
-
+  let ingredients = [];
+  if (category.ingredients) {
+    ingredients = category.ingredients.map((ingredient) =>
+      allingredients.find((_ingredient) => _ingredient.id === ingredient.id)
+    );
+  }
   return (
     <>
       <DetailWrapper>
         <h3 className="mt-5">{category.name}</h3>
       </DetailWrapper>
-      <List>
-        <IngredientList ingredients={ingredients} />
-      </List>
+      {ingredients.length > 0 ? (
+        <List>
+          <IngredientList ingredients={ingredients} />
+        </List>
+      ) : (
+        <List>No Ingredients yet</List>
+      )}
     </>
   );
 }
