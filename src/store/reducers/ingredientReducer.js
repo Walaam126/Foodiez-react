@@ -10,7 +10,6 @@ export const ingredientReducer = (state = initialState, action) => {
         ...state,
         ingredients: action.payload.ingredients,
       };
-
     case "CREATE_INGREDIENT":
       const newIngredient = action.payload.newIngredient;
       return {

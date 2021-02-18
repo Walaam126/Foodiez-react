@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router";
 import CategoryList from "./components/CategoryList";
 import CategoryDetail from "./components/CategoryDetail";
 import CategoryForm from "./components/CategoryForm";
+import IngredientForm from "./components/IngredientForm";
 import Navbar from "./components/Navbar";
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Switch>
         <Route path={"/categories/new"}>
           <CategoryForm />
+        </Route>
+        <Route path="/categories/:categorySlug/ingredient/add">
+          <IngredientForm />
         </Route>
         <Route path="/categories/:categorySlug">
           <CategoryDetail />

@@ -61,4 +61,5 @@ export const DetailWrapper = styled.div`
   p {
     vertical-align: middle;
   }
+  
 `;
