@@ -6,6 +6,7 @@ import CategoryForm from "./components/CategoryForm";
 import IngredientForm from "./components/IngredientForm";
 import Navbar from "./components/Navbar";
 import RecipeForm from "./components/RecipeForm";
+import RecipeList from "./components/RecipeList";
 function App() {
   return (
     <>
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path={"/recipes/new"}>
           <RecipeForm />
+        </Route>
+        <Route path={"/recipes"}>
+          <RecipeList />
         </Route>
         <Route path={"/categories/new"}>
           <CategoryForm />

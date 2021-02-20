@@ -1,10 +1,19 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
-export const categoryList = styled.div`
-  background-color: #e5e5e;
+export const RecipeCard = styled.div`
+  width: 18rem;
+`;
+export const RecipeImg = styled.img`
+width: 16rem;
+margin-top:10px
+margin-left:3px;
+`;
+export const Categorylist = styled.div`
+ 
   margin-top:130px
   padding:20px;
+  background-color:#e5e5e;
 
 `;
 

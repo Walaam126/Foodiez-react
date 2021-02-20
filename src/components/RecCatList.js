@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Categorylist } from "../styles";
 import RecCatItem from "./RecCatItem";
 const RecCatList = (props) => {
   const categories = useSelector((state) => state.categoryReducer.categories);
@@ -15,7 +16,7 @@ const RecCatList = (props) => {
   ));
 
   return (
-    <div
+    <Categorylist
       className="accordion accordion-flush"
       id="accordionFlushExample"
       style={{
@@ -26,7 +27,7 @@ const RecCatList = (props) => {
     >
       <h5>Food Category</h5>
       {categoriesList}
-    </div>
+    </Categorylist>
   );
 };
 

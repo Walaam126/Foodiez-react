@@ -75,7 +75,10 @@ function IngredientForm() {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary btn-block mb-4">
+              <button
+                type="submit"
+                className="btn btn-primary btn-block mb-4 float-end"
+              >
                 Add
               </button>
             </form>
