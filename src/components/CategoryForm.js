@@ -1,6 +1,6 @@
-import { List, Title } from "../styles";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { Title } from "../styles";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { createCategory } from "../store/actions/categoryAction";
 function CategoryForm() {

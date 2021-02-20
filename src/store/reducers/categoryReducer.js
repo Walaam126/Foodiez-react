@@ -3,7 +3,6 @@ const initialState = {
   loading: true,
 };
 export const categoryReducer = (state = initialState, action) => {
-  console.log(action)
   switch (action.type) {
     case "FETCH_CATEGORY":
       state.loading = false;
@@ -13,18 +12,18 @@ export const categoryReducer = (state = initialState, action) => {
       };
 
     case "CREATE_CATEGORY":
-      const newCategory = action.payload.newCategory;
+      let newCategory = action.payload.newCategory;
+      newCategory = { ...newCategory, ingredients: [] };
       return {
         ...state,
         categories: [...state.categories, newCategory],
       };
     case "CREATE_INGREDIENT":
       const ingredientsid = action.payload.newIngredient.id;
-      const categoryId= action.payload.newIngredient.categoryId;
-      console.log(categoryId)
+      const categoryId = action.payload.newIngredient.categoryId;
       state.categories.forEach((category) => {
         if (category.id === categoryId)
-        category.ingredients.push({ id: ingredientsid });
+          category.ingredients.push({ id: ingredientsid });
       });
       return {
         ...state,

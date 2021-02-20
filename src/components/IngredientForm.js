@@ -1,16 +1,11 @@
-import { List, Title } from "../styles";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams, useLocation } from "react-router-dom";
+import { Title } from "../styles";
+import { useDispatch } from "react-redux";
+import { useHistory, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { createIngredient } from "../store/actions/ingredientAction";
 function IngredientForm() {
   const history = useHistory();
   const dispatch = useDispatch();
-    // const { categorySlug } = useParams();
-    // const categories = useSelector((state) => state.categoryReducer.categories);
-    // const category = categories.find(
-    //   (_category) => _category.slug === categorySlug
-    // );
   const [ingredient, setIngredient] = useState({
     name: "",
     image: "",
@@ -29,7 +24,7 @@ function IngredientForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(createIngredient(ingredient));
-    history.push("/categories");
+    history.goBack();
   };
   return (
     <>

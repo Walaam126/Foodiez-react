@@ -1,6 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
+export const categoryList = styled.div`
+  background-color: #e5e5e;
+  margin-top:130px
+  padding:20px;
+
+`;
+
 export const Override = styled.div`
   display: block;
   margin: 0 auto;
@@ -42,6 +49,7 @@ export const Navitem = styled(NavLink)`
   &:hover {
     color: #f6aa1c;
   }
+  text-decoration: none !important;
 `;
 
 export const Title = styled.h1`
@@ -61,5 +69,4 @@ export const DetailWrapper = styled.div`
   p {
     vertical-align: middle;
   }
-  
 `;

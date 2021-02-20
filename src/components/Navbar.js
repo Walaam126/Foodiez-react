@@ -16,22 +16,24 @@ function Navbar() {
           {/* <GiBookshelf size="2.5em"/>{' '} */}
           Foodiez{" "}
         </NavLink>
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <Navitem className="nav-item" aria-current="page" to={`/`}>
-            {" "}
-            Home
-          </Navitem>
+        <form className="d-flex">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <Navitem className="nav-item" aria-current="page" to={`/`}>
+              {" "}
+              Home
+            </Navitem>
 
-          <Navitem className="nav-item" to={`/categories`}>
-            {" "}
-            Categories
-          </Navitem>
+            <Navitem className="nav-item" to={`/categories`}>
+              {" "}
+              Categories
+            </Navitem>
 
-          <Navitem className="nav-item" to={`/`}>
-            {" "}
-            Recieps
-          </Navitem>
-        </ul>
+            <Navitem className="nav-item" to={`/recipes/new`}>
+              {" "}
+              Recieps
+            </Navitem>
+          </ul>
+        </form>
       </div>
     </nav>
   );
