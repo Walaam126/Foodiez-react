@@ -7,6 +7,8 @@ import IngredientForm from "./components/IngredientForm";
 import Navbar from "./components/Navbar";
 import RecipeForm from "./components/RecipeForm";
 import RecipeList from "./components/RecipeList";
+import RecipeDetail from "./components/RecipeDetail";
+import Home from "./components/Home";
 function App() {
   return (
     <>
@@ -14,6 +16,9 @@ function App() {
       <Switch>
         <Route path={"/recipes/new"}>
           <RecipeForm />
+        </Route>
+        <Route path={"/recipe/:recipeSlug"}>
+          <RecipeDetail />
         </Route>
         <Route path={"/recipes"}>
           <RecipeList />
@@ -30,7 +35,9 @@ function App() {
         <Route path="/categories">
           <CategoryList />
         </Route>
-        <Route exact path="/"></Route>
+        <Route exact path="/">
+          <Home/>
+        </Route>
       </Switch>
     </>
   );

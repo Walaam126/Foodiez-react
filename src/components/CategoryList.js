@@ -17,9 +17,12 @@ function CategoryList() {
       <List>
         {categoriesList}
         <Link to={`/categories/new`}>
-          <button type="button" className="btn btn-primary">
-            Add New
-          </button>
+          <img
+            src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-add-icon.png"
+            alt="foodhoto"
+            style={{ width: "200px", height: "160px" }}
+            className="mb-5"
+          />
         </Link>
       </List>
     </div>

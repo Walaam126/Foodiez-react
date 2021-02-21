@@ -23,6 +23,7 @@ export const createCategory = (newCategory) => {
       const formData = new FormData();
       for (const key in newCategory) formData.append(key, newCategory[key]);
       const res = await instance.post("/category", formData);
+      console.log(res)
       dispatch({
         type: types.CREATE_CATEGORY,
         payload: { newCategory: res.data },

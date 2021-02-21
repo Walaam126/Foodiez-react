@@ -5,16 +5,13 @@ export const RecipeCard = styled.div`
   width: 18rem;
 `;
 export const RecipeImg = styled.img`
-width: 16rem;
-margin-top:10px
-margin-left:3px;
+width: 17rem;
+height:250px
 `;
 export const Categorylist = styled.div`
  
-  margin-top:130px
+  margin-top:130px;
   padding:20px;
-  background-color:#e5e5e;
-
 `;
 
 export const Override = styled.div`

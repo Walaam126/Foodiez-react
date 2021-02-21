@@ -2,6 +2,7 @@ import { Title } from "../styles";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import {createRecipe} from "../store/actions/recipeAction"
 import RecCatList from "./RecCatList";
 function RecipeForm() {
   const history = useHistory();
@@ -25,9 +26,11 @@ function RecipeForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // dispatch();
-    // history.push("/categories");
+    console.log(recipe.ingredients)
+    dispatch(createRecipe(recipe));
+    history.push("/recipes");
   };
+  
 
   return (
     <>

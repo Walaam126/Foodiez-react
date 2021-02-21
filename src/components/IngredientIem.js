@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 function IngredientIem({ ingredient }) {
   return (
     <ListItem>
-      <Link to={`/categories`}>
+      <div class="card mx-3 mb-3 text-center" >
         <img src={ingredient.image} alt="foodhoto" />
-      </Link>
-      <p>{ingredient.name}</p>
+        <div class="card-body p-1 "  >
+        <h5 style={{padding:"0px"}} className="mt-2">{ingredient.name}</h5>
+        </div>
+      </div>
     </ListItem>
   );
 }

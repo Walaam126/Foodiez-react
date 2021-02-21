@@ -28,9 +28,9 @@ function Navbar() {
               Categories
             </Navitem>
 
-            <Navitem className="nav-item" to={`/recipes/new`}>
+            <Navitem className="nav-item" to={`/recipes`}>
               {" "}
-              Recieps
+              Recipes
             </Navitem>
           </ul>
         </form>
